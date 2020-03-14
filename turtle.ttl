@@ -1,0 +1,252 @@
+@prefix : <http://www.w3.org/ns/coap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/ns/modbus> .
+
+
+
+<http://www.w3.org/ns/modbus> rdf:type owl:Ontology ;
+                            
+                            rdfs:label "CoAP in RDF"@en .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+:functionCode   rdf:type owl:ObjectProperty ;
+                        
+                rdfs:domain :Request ;
+
+                rdfs:range :FunctionCode .
+
+
+:responseCode rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Response ;
+              
+              rdfs:range :ResponseCode .
+###
+#Range (rdfs:range) definiert die mögliche Klasse der Objekte
+#Entspricht dem Wertebereich einer Funktion
+
+#Domain (rdfs:domain) definiert die mögliche Klasse der Objekte
+#Entspricht dem Definitionsbereich einer Funktion
+
+
+
+# ###  http://www.w3.org/ns/coap#options
+
+# :options rdf:type owl:ObjectProperty ;
+         
+#          rdfs:domain :Message ;
+         
+#          rdfs:range :MessageOption .
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+#Option Data encoding? Little Endian / Big Endian
+###  http://www.w3.org/ns/coap#optionNumber
+
+# :optionNumber rdf:type owl:DatatypeProperty ;
+              
+#               rdfs:domain :MessageOption .
+
+
+
+# ###  http://www.w3.org/ns/coap#optionValue
+
+# :optionValue rdf:type owl:DatatypeProperty ;
+             
+#              rdfs:domain :MessageOption .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.w3.org/ns/coap#Code
+
+:Code rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/ns/coap#Message
+
+:Message rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/ns/coap#MessageOption
+
+#:MessageOption rdf:type owl:Class .
+
+
+
+
+:FunctionCode rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Code .
+
+
+:ResponseCode rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Code .
+
+
+
+###  http://www.w3.org/ns/coap#Request
+
+:Request rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Message .
+
+
+
+###  http://www.w3.org/ns/coap#Response
+
+:Response rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Message .
+
+
+
+
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.w3.org/ns/modbus#FC1
+
+<http://www.w3.org/ns/modbus#FC1> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 1 .
+
+###  http://www.w3.org/ns/modbus#FC2
+
+<localhost/ns/modbus#FC2> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 2 .
+
+###  http://www.w3.org/ns/modbus#FC3
+
+<localhost/ns/modbus#FC3> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 3 .
+                                 
+###  http://www.w3.org/ns/modbus#FC4
+
+<localhost/ns/modbus#FC4> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 4 .
+
+###  http://www.w3.org/ns/modbus#FC5
+
+<localhost/ns/modbus#FC5> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 5 .
+
+###  http://www.w3.org/ns/modbus#FC6
+
+<localhost/ns/modbus#FC6> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 6 .
+ ###  http://www.w3.org/ns/modbus#FC15
+
+<localhost/ns/modbus#FC15> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 15 .
+###  http://www.w3.org/ns/modbus#FC15
+
+<localhost/ns/modbus#FC16> rdf:type owl:NamedIndividual ,
+                                          :FunctionCode ;
+                                 
+                                 rdfs:label 16 .
+
+
+
+### Modbus responses
+
+###  http://www.w3.org/ns/coap#2.01
+
+<http://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "ILLEGAL FUNCTION" .
+
+
+
+###  http://www.w3.org/ns/coap#2.02
+
+<http://www.w3.org/ns/coap#2.02> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "ILLEGAL DATA ADDRESS" .
+
+
+
+###  http://www.w3.org/ns/coap#2.03
+
+<http://www.w3.org/ns/coap#2.03> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "ILLEGAL DATA VALUE" .
+
+
+
+###  http://www.w3.org/ns/coap#2.04
+
+<http://www.w3.org/ns/coap#2.04> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "SERVERDEVICE FAILURE" .
+
+
+
+###  http://www.w3.org/ns/coap#2.05
+
+<http://www.w3.org/ns/coap#2.05> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "ACKNOWLEDGE" .
+#The   serverhas   accepted   the request   and   is processing  it,  but  a  long  duration  of  time  will  be required  to  do  so.  This  response  is  returned  to prevent   a   timeout   error   from   occurring   in   the client.  The  client  can  next  issue  a  Poll  Program Complete  message  to  determine  if  processing  is completed
+
+
+###  http://www.w3.org/ns/coap#4.00
+
+<http://www.w3.org/ns/coap#2.06> rdf:type owl:NamedIndividual ,
+                                          :ResponseCode ;
+                                 
+                                 rdfs:label "SERVERDEVICE BUSY" .
+
