@@ -1,16 +1,16 @@
-@prefix : <http://www.example.com/ns/modbus#> .
+@prefix : <https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.example.com/ns/modbus> .
+@base <https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus> .
 
 
 ### Modeled after CoAP Binding Template:
 ### https://github.com/w3c/wot-binding-templates/blob/master/ontology/coap.ttl
 
-<http://www.example.com/ns/modbus> rdf:type owl:Ontology ;
+:modbus+tcp rdf:type owl:Ontology ;
                             
                             rdfs:label "Modbus in RDF"@en .
 
@@ -43,7 +43,7 @@
 
 
 
-# ###  http://www.example.com/ns/modbus#options
+# ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#options
 
  :options rdf:type owl:ObjectProperty ;
         
@@ -63,7 +63,7 @@
 :encodingOption rdf:type xsd:boolean ;
                 rdfs:domain :RequestOption .
 
-###  http://www.example.com/ns/modbus#optionNumber
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#optionNumber
 
 # :optionNumber rdf:type owl:DatatypeProperty ;
               
@@ -71,7 +71,7 @@
 
 
 
-# ###  http://www.example.com/ns/modbus#optionValue
+# ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#optionValue
 
 # :optionValue rdf:type owl:DatatypeProperty ;
              
@@ -88,19 +88,19 @@
 #################################################################
 
 
-###  http://www.example.com/ns/modbus#Code
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#Code
 
 :Code rdf:type owl:Class .
 
 
 
-###  http://www.example.com/ns/modbus#Message
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#Message
 
 :Message rdf:type owl:Class .
 
 
 
-###  http://www.example.com/ns/modbus#MessageOption
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#MessageOption
 
 #:MessageOption rdf:type owl:Class .
 
@@ -119,7 +119,7 @@
 
 
 
-###  http://www.example.com/ns/modbus#Request
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#Request
 
 :Request rdf:type owl:Class ;
          
@@ -127,7 +127,7 @@
 
 
 
-###  http://www.example.com/ns/modbus#Response
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#Response
 
 :Response rdf:type owl:Class ;
           
@@ -148,56 +148,56 @@
 #################################################################
 
 
-###  http://www.example.com/ns/modbus#FC1
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC1
 
-<http://www.example.com/ns/modbus#FC1> rdf:type owl:NamedIndividual ,
+:FC1 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 1 .
 
-###  http://www.example.com/ns/modbus#FC2
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC2
 
-<http://www.example.org/ns/modbus#FC2> rdf:type owl:NamedIndividual ,
+:FC2 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 2 .
 
-###  http://www.example.com/ns/modbus#FC3
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC3
 
-<http://www.example.org/ns/modbus#FC3> rdf:type owl:NamedIndividual ,
+:FC3 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 3 .
                                  
-###  http://www.example.com/ns/modbus#FC4
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC4
 
-<http://www.example.org/ns/modbus#FC4> rdf:type owl:NamedIndividual ,
+:FC4 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 4 .
 
-###  http://www.example.com/ns/modbus#FC5
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC5
 
-<http://www.example.org/ns/modbus#FC5> rdf:type owl:NamedIndividual ,
+:FC5 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 5 .
 
-###  http://www.example.com/ns/modbus#FC6
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC6
 
-<http://www.example.org/ns/modbus#FC6> rdf:type owl:NamedIndividual ,
+:FC6 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 6 .
- ###  http://www.example.com/ns/modbus#FC15
+ ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC15
 
-<http://www.example.org/ns/modbus#FC15> rdf:type owl:NamedIndividual ,
+:FC15 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 15 .
-###  http://www.example.com/ns/modbus#FC15
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#FC15
 
-<http://www.example.org/ns/modbus#FC16> rdf:type owl:NamedIndividual ,
+:FC16 rdf:type owl:NamedIndividual ,
                                           :FunctionCode ;
                                  
                                  rdfs:label 16 .
@@ -206,55 +206,55 @@
 
 ### Modbus responses
 
-###  http://www.example.com/ns/modbus#2.01
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.01
 
-<http://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf> rdf:type owl:NamedIndividual ,
-                                          :ResponseCode ;
+# <http://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf> rdf:type owl:NamedIndividual ,
+#                                           :ResponseCode ;
                                  
-                                 rdfs:label "ILLEGAL FUNCTION" .
+#                                  rdfs:label "ILLEGAL FUNCTION" .
 
 
 
-###  http://www.example.com/ns/modbus#2.02
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.02
 
-<http://www.example.com/ns/modbus#2.02> rdf:type owl:NamedIndividual ,
+:2.02 rdf:type owl:NamedIndividual ,
                                           :ResponseCode ;
                                  
                                  rdfs:label "ILLEGAL DATA ADDRESS" .
 
 
 
-###  http://www.example.com/ns/modbus#2.03
+###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.03
 
-<http://www.example.com/ns/modbus#2.03> rdf:type owl:NamedIndividual ,
-                                          :ResponseCode ;
+# :2.03 rdf:type owl:NamedIndividual ,
+#                                           :ResponseCode ;
                                  
-                                 rdfs:label "ILLEGAL DATA VALUE" .
+#                                  rdfs:label "ILLEGAL DATA VALUE" .
 
 
 
-###  http://www.example.com/ns/modbus#2.04
+# ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.04
 
-<http://www.example.com/ns/modbus#2.04> rdf:type owl:NamedIndividual ,
-                                          :ResponseCode ;
+# <https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.04> rdf:type owl:NamedIndividual ,
+#                                           :ResponseCode ;
                                  
-                                 rdfs:label "SERVERDEVICE FAILURE" .
+#                                  rdfs:label "SERVERDEVICE FAILURE" .
 
 
 
-###  http://www.example.com/ns/modbus#2.05
+# ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.05
 
-<http://www.example.com/ns/modbus#2.05> rdf:type owl:NamedIndividual ,
-                                          :ResponseCode ;
+# <https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.05> rdf:type owl:NamedIndividual ,
+#                                           :ResponseCode ;
                                  
-                                 rdfs:label "ACKNOWLEDGE" .
-#The   serverhas   accepted   the request   and   is processing  it,  but  a  long  duration  of  time  will  be required  to  do  so.  This  response  is  returned  to prevent   a   timeout   error   from   occurring   in   the client.  The  client  can  next  issue  a  Poll  Program Complete  message  to  determine  if  processing  is completed
+#                                  rdfs:label "ACKNOWLEDGE" .
+# #The   serverhas   accepted   the request   and   is processing  it,  but  a  long  duration  of  time  will  be required  to  do  so.  This  response  is  returned  to prevent   a   timeout   error   from   occurring   in   the client.  The  client  can  next  issue  a  Poll  Program Complete  message  to  determine  if  processing  is completed
 
 
-###  http://www.example.com/ns/modbus#4.00
+# ###  https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#4.00
 
-<http://www.example.com/ns/modbus#2.06> rdf:type owl:NamedIndividual ,
-                                          :ResponseCode ;
+# <https://raw.githubusercontent.com/Drukob/2048DQN/master/modbus#2.06> rdf:type owl:NamedIndividual ,
+#                                           :ResponseCode ;
                                  
-                                 rdfs:label "SERVERDEVICE BUSY" .
+#                                  rdfs:label "SERVERDEVICE BUSY" .
 
